@@ -1,0 +1,4 @@
+[30-Nov-2014 17:23:32 America/New_York] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 101 bytes) in /home/lonelyhopbrewing/public_html/includes/database/database.inc on line 2171
+[30-Nov-2014 17:24:10 America/New_York] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 8192 bytes) in /home/lonelyhopbrewing/public_html/includes/database/query.inc on line 1855
+[30-Nov-2014 17:27:33 America/New_York] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 72 bytes) in /home/lonelyhopbrewing/public_html/includes/menu.inc on line 358
+[30-Nov-2014 17:28:18 America/New_York] PHP Fatal error:  Allowed memory size of 67108864 bytes exhausted (tried to allocate 72 bytes) in /home/lonelyhopbrewing/public_html/includes/menu.inc on line 3745
