@@ -55,7 +55,12 @@ blockquote { background:transparent url('images/blockquote.png') no-repeat top l
 */
 #header { clear:both; }
 
-#header-inside { margin: 0 auto; padding:40px 0; overflow:hidden; } 
+#header-inside {
+  margin: 0 auto;
+  padding:40px 0;
+  overflow:hidden;
+  background-image: url("images/wood.png");
+  height: 170px;}
 
 #header-menu { clear:both; }
 
