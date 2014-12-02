@@ -7230,13 +7230,27 @@ a.th {
 }
 
 .slide-text {
-  background: rgba(255, 255, 255, 0.70);
+  background: rgba(0, 0, 0, 1);
   padding: 1px 0px 1px 5px !important;
   left: 545px;
   position: relative;
-  top: 190px;
-  width: 445px;
+  top: -60px;
+  width: 420px;
   z-index: 500;
   border-radius: 12px;
   text-align: center;
+}
+
+#site-name{
+  position: relative;
+  top: -180px;
+  left: 30px;
+}
+
+#site-name a span {
+  color: white;
+}
+
+nav#main-menu.navigation{
+  margin-top: -85px;
 }
