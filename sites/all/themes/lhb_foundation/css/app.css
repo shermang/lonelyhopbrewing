@@ -7254,3 +7254,7 @@ a.th {
 nav#main-menu.navigation{
   margin-top: -85px;
 }
+
+div.panel-pane.pane-views-panes.pane-slideshows-panel-pane-1 h2.pane-title{
+  display: none;
+}
