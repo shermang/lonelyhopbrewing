@@ -7295,3 +7295,8 @@ h2.pane-title{
 .featured-slide-image{
   float:right;
 }
+
+.views_slideshow_main {
+  position: relative;
+  min-height: 200px;
+}
