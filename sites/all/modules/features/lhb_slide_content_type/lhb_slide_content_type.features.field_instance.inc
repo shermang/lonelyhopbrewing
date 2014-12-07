@@ -10,9 +10,9 @@
 function lhb_slide_content_type_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-vsx_slide-body'
-  $field_instances['node-vsx_slide-body'] = array(
-    'bundle' => 'vsx_slide',
+  // Exported field_instance: 'node-beer-body'
+  $field_instances['node-beer-body'] = array(
+    'bundle' => 'beer',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
@@ -42,15 +42,14 @@ function lhb_slide_content_type_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'body',
-    'label' => 'Overlay Text',
-    'required' => 0,
+    'label' => 'Body',
+    'required' => FALSE,
     'settings' => array(
-      'display_summary' => 1,
+      'display_summary' => TRUE,
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 1,
       'module' => 'text',
       'settings' => array(
         'rows' => 20,
@@ -61,20 +60,72 @@ function lhb_slide_content_type_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-vsx_slide-field_slide_image'
-  $field_instances['node-vsx_slide-field_slide_image'] = array(
-    'bundle' => 'vsx_slide',
+  // Exported field_instance: 'node-beer-field_featured'
+  $field_instances['node-beer-field_featured'] = array(
+    'bundle' => 'beer',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
     'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'image',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 3,
+      ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_featured',
+    'label' => 'Featured',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 35,
+    ),
+  );
+
+  // Exported field_instance: 'node-beer-field_release_date'
+  $field_instances['node-beer-field_release_date'] = array(
+    'bundle' => 'beer',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'date',
         'settings' => array(
-          'image_link' => '',
-          'image_style' => '',
+          'format_type' => 'long',
+          'fromto' => 'both',
+          'multiple_from' => '',
+          'multiple_number' => '',
+          'multiple_to' => '',
         ),
-        'type' => 'image',
+        'type' => 'date_default',
         'weight' => 2,
       ),
       'featured' => array(
@@ -91,13 +142,69 @@ function lhb_slide_content_type_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_slide_image',
+    'field_name' => 'field_release_date',
+    'label' => 'Release Date',
+    'required' => 0,
+    'settings' => array(
+      'default_value' => 'now',
+      'default_value2' => 'same',
+      'default_value_code' => '',
+      'default_value_code2' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'date',
+      'settings' => array(
+        'increment' => 15,
+        'input_format' => 'M j Y - g:i:sa',
+        'input_format_custom' => '',
+        'label_position' => 'above',
+        'text_parts' => array(),
+        'year_range' => '-3:+3',
+      ),
+      'type' => 'date_popup',
+      'weight' => 34,
+    ),
+  );
+
+  // Exported field_instance: 'node-beer-field_vsx_slide_image'
+  $field_instances['node-beer-field_vsx_slide_image'] = array(
+    'bundle' => 'beer',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 1,
+      ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_vsx_slide_image',
     'label' => 'Slide Image',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'alt_field' => 0,
       'default_image' => 0,
-      'file_directory' => 'slides',
+      'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
       'max_resolution' => '',
@@ -129,8 +236,8 @@ function lhb_slide_content_type_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-vsx_slide-field_slide_order'
-  $field_instances['node-vsx_slide-field_slide_order'] = array(
+  // Exported field_instance: 'node-vsx_slide-body'
+  $field_instances['node-vsx_slide-body'] = array(
     'bundle' => 'vsx_slide',
     'default_value' => NULL,
     'deleted' => 0,
@@ -138,14 +245,9 @@ function lhb_slide_content_type_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'number',
-        'settings' => array(
-          'decimal_separator' => '.',
-          'prefix_suffix' => TRUE,
-          'scale' => 0,
-          'thousand_separator' => ' ',
-        ),
-        'type' => 'number_integer',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
         'weight' => 3,
       ),
       'featured' => array(
@@ -162,22 +264,23 @@ function lhb_slide_content_type_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_slide_order',
-    'label' => 'Slide Order',
+    'field_name' => 'body',
+    'label' => 'Overlay Text',
     'required' => 0,
     'settings' => array(
-      'max' => '',
-      'min' => '',
-      'prefix' => '',
-      'suffix' => '',
+      'display_summary' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 0,
-      'module' => 'number',
-      'settings' => array(),
-      'type' => 'number',
-      'weight' => 34,
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 20,
+        'summary_rows' => 5,
+      ),
+      'type' => 'text_textarea_with_summary',
+      'weight' => 2,
     ),
   );
 
@@ -193,7 +296,7 @@ function lhb_slide_content_type_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 4,
+        'weight' => 2,
       ),
       'featured' => array(
         'label' => 'above',
@@ -211,7 +314,7 @@ function lhb_slide_content_type_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_slide_placement',
     'label' => 'Slide Placement',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -219,13 +322,81 @@ function lhb_slide_content_type_field_default_field_instances() {
       'active' => 1,
       'module' => 'options',
       'settings' => array(),
-      'type' => 'options_buttons',
-      'weight' => 35,
+      'type' => 'options_select',
+      'weight' => 5,
     ),
   );
 
-  // Exported field_instance: 'node-vsx_slide-field_slideshow_link'
-  $field_instances['node-vsx_slide-field_slideshow_link'] = array(
+  // Exported field_instance: 'node-vsx_slide-field_vsx_slide_image'
+  $field_instances['node-vsx_slide-field_vsx_slide_image'] = array(
+    'bundle' => 'vsx_slide',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 0,
+      ),
+      'featured' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_vsx_slide_image',
+    'label' => 'Slide Image',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 0,
+      'default_image' => 0,
+      'file_directory' => 'slides',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'image',
+      'settings' => array(
+        'manualcrop_crop_info' => 1,
+        'manualcrop_default_crop_area' => 1,
+        'manualcrop_enable' => 0,
+        'manualcrop_inline_crop' => 0,
+        'manualcrop_instant_crop' => 0,
+        'manualcrop_instant_preview' => 1,
+        'manualcrop_keyboard' => 1,
+        'manualcrop_maximize_default_crop_area' => 0,
+        'manualcrop_require_cropping' => array(),
+        'manualcrop_styles_list' => array(),
+        'manualcrop_styles_mode' => 'include',
+        'manualcrop_thumblist' => 0,
+        'preview_image_style' => 'thumbnail',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'image_image',
+      'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance: 'node-vsx_slide-field_vsx_slide_order'
+  $field_instances['node-vsx_slide-field_vsx_slide_order'] = array(
     'bundle' => 'vsx_slide',
     'default_value' => NULL,
     'deleted' => 0,
@@ -233,9 +404,14 @@ function lhb_slide_content_type_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'link',
-        'settings' => array(),
-        'type' => 'link_default',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => TRUE,
+          'scale' => 0,
+          'thousand_separator' => ' ',
+        ),
+        'type' => 'number_integer',
         'weight' => 1,
       ),
       'featured' => array(
@@ -252,53 +428,34 @@ function lhb_slide_content_type_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_slideshow_link',
-    'label' => 'Slideshow Link',
+    'field_name' => 'field_vsx_slide_order',
+    'label' => 'Slide Order',
     'required' => 0,
     'settings' => array(
-      'absolute_url' => 1,
-      'attributes' => array(
-        'class' => '',
-        'configurable_class' => 0,
-        'configurable_title' => 0,
-        'rel' => '',
-        'target' => 'default',
-        'title' => '',
-      ),
-      'display' => array(
-        'url_cutoff' => 80,
-      ),
-      'enable_tokens' => 1,
-      'linkit' => array(
-        'button_text' => 'Search',
-        'enable' => 0,
-        'profile' => '',
-      ),
-      'rel_remove' => 'default',
-      'title' => 'optional',
-      'title_label_use_field_label' => 0,
-      'title_maxlength' => 128,
-      'title_value' => '',
-      'url' => 0,
+      'max' => '',
+      'min' => '',
+      'prefix' => '',
+      'suffix' => '',
       'user_register_form' => FALSE,
-      'validate_url' => 1,
     ),
     'widget' => array(
       'active' => 0,
-      'module' => 'link',
+      'module' => 'number',
       'settings' => array(),
-      'type' => 'link_field',
-      'weight' => 32,
+      'type' => 'number',
+      'weight' => 4,
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Body');
+  t('Featured');
   t('Overlay Text');
+  t('Release Date');
   t('Slide Image');
   t('Slide Order');
   t('Slide Placement');
-  t('Slideshow Link');
 
   return $field_instances;
 }

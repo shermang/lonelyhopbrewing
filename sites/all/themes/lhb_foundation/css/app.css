@@ -7234,11 +7234,18 @@ a.th {
   padding: 1px 0px 1px 5px !important;
   left: 545px;
   position: relative;
-  top: -60px;
+  top: 190px;
   width: 420px;
   z-index: 500;
   border-radius: 12px;
   text-align: center;
+}
+
+
+.slide-text-noimage {
+  border: white solid 3px;
+  padding: 10px;
+  font-size: 20px;
 }
 
 #site-name{
@@ -7257,4 +7264,34 @@ nav#main-menu.navigation{
 
 div.panel-pane.pane-views-panes.pane-slideshows-panel-pane-1 h2.pane-title{
   display: none;
+}
+
+h2.pane-title{
+  color: white;
+  text-align: center;
+  font-size: 40px;
+}
+
+
+.featured-published-date{
+  text-align: center;
+  color: white;
+  font-size: 24px;
+  padding-bottom: 30px;
+}
+
+.featured-body{
+  float: left;
+  color: white;
+  width: 50%;
+}
+
+.featured-body a{
+  color:white;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.featured-slide-image{
+  float:right;
 }

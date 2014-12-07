@@ -1,0 +1,12 @@
+<?php
+
+/**
+ * @file
+ * lhb_custom.module
+ *
+ * Provides custom functionality
+ */
+
+function lhb_custom_form_alter(){
+
+}

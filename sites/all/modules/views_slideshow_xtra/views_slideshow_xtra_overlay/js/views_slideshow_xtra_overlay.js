@@ -11,8 +11,10 @@
         return;
       }
 
-      // Hide all overlays for all slides.
-      $('.views-slideshow-xtra-overlay-row').hide();
+      // Hide all overlays if there is more than one slide.
+      if($(".views_slideshow_cycle_slide").length > 1) {
+        $('.views-slideshow-xtra-overlay-row').hide();
+      }
 
       var pageX = 0, pageY = 0, timeout;
 
