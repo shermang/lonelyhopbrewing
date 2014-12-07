@@ -12,7 +12,7 @@
       }
 
       // Hide all overlays if there is more than one slide.
-      if($(".views_slideshow_cycle_slide").length > 1) {
+      if($(".views-slideshow-xtra-overlay-row").length > 1) {
         $('.views-slideshow-xtra-overlay-row').hide();
       }
 
