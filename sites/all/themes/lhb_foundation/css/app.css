@@ -7304,3 +7304,17 @@ h2.pane-title{
 .about-us-text {
   margin-right: 220px;
 }
+
+@media screen and (max-width: 768px) {
+  .slideshow-image {
+    width: 100%;
+  }
+
+  .view-views-slideshow-xtra-example{
+    margin-bottom: 180px;
+  }
+
+  .featured-body{
+    width: 96%
+  }
+}
