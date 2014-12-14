@@ -1,0 +1,18 @@
+Index: sites/all/modules/contrib/print/css/print.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- sites/all/modules/contrib/print/css/print.css	(date 1416924322000)
++++ sites/all/modules/contrib/print/css/print.css	(revision )
+@@ -41,3 +41,9 @@
+ .print-source_url {font-size: small;}
+ .print-links {font-size: small;}
+ .print-footer {text-align: center;}
++
++
++.burr-flipped-content {
++  float: left;
++  width: 95%;
++}
+\ No newline at end of file

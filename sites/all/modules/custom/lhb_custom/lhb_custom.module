@@ -10,3 +10,70 @@
 function lhb_custom_form_alter(){
 
 }
+
+/**
+ * Provide a select options component to Webform. The values are
+ * populated via a call to _lhb_custom_get_beer_options, which returns
+ * an array of nodes.
+ *
+ * @return void
+ * @author Kosta Harlan
+ */
+function lhb_custom_webform_select_options_info() {
+  $items = array();
+
+  if (function_exists('_lhb_custom_get_beer_nodes')) {
+    $items['beer-nodes'] = array(
+      'title' => t('Beer nodes'),
+      'options callback' => '_lhb_custom_get_beer_nodes',
+    );
+  }
+
+  if (module_exists('views')) {
+    $items['views'] = array(
+      'title' => t('A view'),
+      'options callback' => '_lhb_custom_get_beer_view_options',
+    );
+  }
+
+  return $items;
+}
+
+/**
+ * Returns an array of Beer nodes keyed on the node ID.
+ *
+ * @return array
+ * @author Kosta Harlan
+ */
+function _lhb_custom_get_beer_nodes() {
+  $nodes = array();
+
+  $select = db_query("SELECT nid, title FROM {node} WHERE type = 'beer' ORDER BY title");
+
+  foreach ($select as $node) {
+    $nodes[$node->nid] = $node->title;
+  }
+  return $nodes;
+}
+
+/**
+ * Options callback for webform_select_options_info().
+ * The assumption is that your view is displaying node data.
+ *
+ * @return array of items to populate the select list with.
+ * @author Kosta Harlan
+ */
+function _lhb_custom_get_beer_view_options() {
+  // Change 'my_sample_view' to the machine name of your View.
+  $view = views_get_view('beer_views', true);
+  $view->set_display('block_1');
+  $view->pre_execute();
+  $view->execute();
+  $items = array();
+
+  foreach ($view->result as $item) {
+    $full_node = node_load($item->nid);
+    $items[$item->nid] = $full_node->title;
+  }
+  return $items;
+}

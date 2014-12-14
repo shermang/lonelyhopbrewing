@@ -7318,3 +7318,13 @@ h2.pane-title{
     width: 96%
   }
 }
+
+.webform-client-form{
+  background: white;
+  color: black;
+  padding: 20px;
+}
+
+input[type="checkbox"], input[type="radio"]{
+  margin: 0 0 .1em 0;
+}
