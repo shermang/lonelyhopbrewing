@@ -7328,3 +7328,7 @@ h2.pane-title{
 input[type="checkbox"], input[type="radio"]{
   margin: 0 0 .1em 0;
 }
+
+.rate-beer-link{
+  padding: 4%;
+}
