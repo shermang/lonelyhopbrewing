@@ -7250,8 +7250,8 @@ a.th {
 
 #site-name{
   position: relative;
-  top: -180px;
-  left: 30px;
+  top: -210px;
+  left: 40px;
 }
 
 #site-name a span {
@@ -7259,7 +7259,7 @@ a.th {
 }
 
 nav#main-menu.navigation{
-  margin-top: -85px;
+  margin-top: -138px;
 }
 
 div.panel-pane.pane-views-panes.pane-slideshows-panel-pane-1 h2.pane-title{
@@ -7331,4 +7331,17 @@ input[type="checkbox"], input[type="radio"]{
 
 .rate-beer-link{
   padding: 4%;
+}
+
+h1#site-name{
+  line-height: 42px;
+}
+
+.left{
+  float: left;
+  width:70%
+}
+
+.right{
+  float: right;
 }

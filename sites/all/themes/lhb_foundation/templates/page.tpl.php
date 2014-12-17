@@ -37,7 +37,7 @@
 
       <?php if ($site_name): ?>
           <h1 id="site-name">
-            <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
+            <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print 'Lonely<br />Hop<br />Brewing'; ?></span></a>
           </h1>
       <?php endif; ?>
 
